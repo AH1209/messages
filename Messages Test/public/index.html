@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0e14"><meta name="description" content="A simple test for real iPhone push notifications.">
+  <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Messages Test">
+  <title>Push Test · Messages Test</title>
+  <link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <header><span class="brand-dot"></span> MESSAGES TEST <span class="pill">iOS 16.4+</span></header>
+  <main>
+    <div class="app-icon"><img src="/icons/icon.svg" width="88" height="88" alt="Messages Test icon"></div>
+    <p class="eyebrow">A LITTLE PING. A REAL CONNECTION.</p>
+    <h1>Push Test</h1><p class="subtitle">Test real iPhone push notifications.</p>
+    <section class="panel" aria-label="Notification test">
+      <div class="timing"><span class="signal">↗</span><span>One tap. Then close the app.</span><span class="seconds">~5 sec</span></div>
+      <button id="send" class="primary" disabled><span aria-hidden="true">↗</span> Send Test Notification</button>
+      <p id="status" class="status" role="status" aria-live="polite">Notifications not enabled</p>
+      <p id="help" class="help">Checking notification support…</p>
+      <button id="enable" class="secondary" hidden>Enable Notifications</button>
+      <form id="authorize" hidden>
+        <label for="code">Device access code</label>
+        <p class="help">Enter the code you configured on Netlify. This keeps your test endpoint private.</p>
+        <div class="input-row"><input id="code" type="password" required autocomplete="current-password" placeholder="Your access code"><button class="secondary" type="submit">Unlock</button></div>
+      </form>
+    </section>
+    <aside><span class="small-dot"></span> Real push. Even after you close the app.</aside>
+    <details><summary>How to test on iPhone <span>+</span></summary><ol><li>Open in Safari, tap Share, then Add to Home Screen.</li><li>Launch Messages Test from its Home Screen icon and enable notifications.</li><li>Send a test. Wait for “Notification scheduled”, then go Home and swipe the app away.</li></ol><p>Delivery usually starts after five seconds. Network conditions, Focus, and iOS notification settings can affect when you see or hear it.</p><button id="reset" class="text-button">Repair notification subscription</button></details>
+  </main>
+  <footer>MESSAGES TEST <span>Built for a simple hello.</span></footer>
+</body></html>

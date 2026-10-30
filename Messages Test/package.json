@@ -1,0 +1,1 @@
+{"name":"messages-push-test","version":"1.0.0","private":true,"type":"module","engines":{"node":">=22"},"scripts":{"test":"node --test","check":"node scripts/check.mjs","build":"npm run check","dev":"npx netlify-cli dev","keys":"web-push generate-vapid-keys --json"},"dependencies":{"web-push":"3.6.7"}}
